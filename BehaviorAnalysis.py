@@ -16,13 +16,13 @@ def Tracking_Fish(video_name, algorithm):
         det_track = algorithm['tracking']
         if det_track == 'CenterTrack':
             print(f"loading CenterTrack model...")
-            sleep(5)
+            sleep(1)
     else:
         detecting = algorithm['detecting']
         tracking = algorithm['tracking']
         if detecting == 'YOLO5':
             print(f"loading YOLOV5 model...")
-            sleep(5)
+            sleep(1)
         else:
             return None
         print(f"="*50)
@@ -30,27 +30,27 @@ def Tracking_Fish(video_name, algorithm):
         print(f"starting tracking fish by Sort")
         if tracking == 'Sort':
             print(f"loading Sort model...")
-            sleep(5)
+            sleep(1)
         else:
             return None
         print(f"="*50)
 
     print(f"starting connecting tracklet")
-    sleep(5)
+    sleep(1)
     track_file = f'path to {video_name}.csv'
     print(f"finish generating tracking file")
     return track_file
 
 def Generate_Video(video_name, track_file):
     print(f"starting generating {video_name} from {track_file}")
-    sleep(5)
+    sleep(1)
     video_file = f'path to tracking results.mp4'
     print(f"finish generating tracking video")
     return video_file
 
 def Generate_BehaviorIndex(video_name, track_file):
     print(f"starting generating behavior information from {video_name}")
-    sleep(5)
+    sleep(1)
     behavior_file = f'path to {video_name}.csv'
     print(f"finish generating behavior information")
     return behavior_file
